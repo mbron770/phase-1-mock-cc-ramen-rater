@@ -53,38 +53,46 @@ function submitNewRamenForm(e) {
     const newRamenCommentText = document.querySelector('#new-comment').value
     
     //set info 
+    /*
     const newRamenName = document.getElementsByClassName('name')[0]
     newRamenName.textContent = newRamenNameText
 
     const newRestaurantName = document.getElementsByClassName('restaurant')[0]
     newRestaurantName.textContent = newRestaurantText
-
+    */
     const newRamenImage = document.createElement('img')
     newRamenImage.src = newRamenImageText
     ramenMenuDiv.append(newRamenImage)
-
+/*
     const newRamenRating = document.querySelector('#rating-display')
     newRamenRating.textContent = newRamenRatingText
     
     const newRamenComment = document.querySelector('#comment-display')
     newRamenComment.textContent = newRamenCommentText
 
+*/
+
     //click on new image and render in
     newRamenImage.addEventListener('click', () =>  {
-        renderNewClickedRamensImages(newRamenImageText, newRamenNameText, newRestaurantText)
+        renderNewClickedRamensImages(newRamenImageText, newRamenNameText, newRestaurantText, newRamenRatingText, newRamenCommentText)
 
     })
 
     document.querySelector('#new-ramen').reset() 
 }
 
-function renderNewClickedRamensImages(newRamenImageText, newRamenNameText, newRestaurantText) {
+function renderNewClickedRamensImages(newRamenImageText, newRamenNameText, newRestaurantText, newRamenRatingText, newRamenCommentText) {
+    //const i = e.target.name.value;
     const newRamenImage = document.getElementsByClassName('detail-image')[0]
     newRamenImage.src = newRamenImageText
     const newRamenName = document.getElementsByClassName('name')[0]
     newRamenName.textContent = newRamenNameText
     const newRestaurantName = document.getElementsByClassName('restaurant')[0]
     newRestaurantName.textContent = newRestaurantText
+    const newRamenRating = document.querySelector('#rating-display')
+    newRamenRating.textContent = newRamenRatingText
+    const newRamenComment = document.querySelector('#comment-display')
+    newRamenComment.textContent = newRamenCommentText
 
 }
 
