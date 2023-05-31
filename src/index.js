@@ -35,8 +35,9 @@ function renderClickedRamensImages(ramen) {
 
 function addNewRamen(){
     const newRamenForm = document.querySelector('#new-ramen')
-    newRamenForm.addEventListener('click', e => {
+    newRamenForm.addEventListener('submit', e => {
         submitNewRamenForm(e)
+        
     })
 }
 
@@ -74,7 +75,7 @@ function submitNewRamenForm(e) {
         renderNewClickedRamensImages(newRamenImageText, newRamenNameText, newRestaurantText)
 
     })
-    document.querySelector('#new-ramen').reset() 
+     
 }
 
 function renderNewClickedRamensImages(newRamenImageText, newRamenNameText, newRestaurantText) {
